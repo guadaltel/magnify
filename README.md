@@ -1,0 +1,2 @@
+# magnify
+Plugin de lupa
