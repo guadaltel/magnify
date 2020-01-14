@@ -4,45 +4,42 @@
     "separator": "*"
   },
   "constructor": "M.plugin.Magnify",
-  "parameters": [
-    {
-      "type": "object",
-      "properties": [
-        {
-          "type": "enum",
-          "name": "position",
-          "possibleValues": [
-            "TL",
-            "TR",
-            "BL",
-            "BR"
-          ],
-          "position": 0
-        },
-        {
-          "type": "simple",
-          "name": "layers",
-          "position": 1
-        },
-        {
-          "type": "simple",
-          "name": "zoomMax",
-          "value": 10,
-          "position": 2
-        },
-        {
-          "type": "simple",
-          "name": "zoom",
-          "value": 1,
-          "position": 3
-        }
-      ]
-    }
-  ],
+  "parameters": [{
+    "type": "object",
+    "properties": [{
+        "type": "enum",
+        "name": "position",
+        "possibleValues": [
+          "TL",
+          "TR",
+          "BL",
+          "BR"
+        ],
+        "position": 0
+      },
+      {
+        "type": "simple",
+        "name": "layers",
+        "position": 1
+      },
+      {
+        "type": "simple",
+        "name": "zoomMax",
+        "value": 10,
+        "position": 2
+      },
+      {
+        "type": "simple",
+        "name": "zoom",
+        "value": 1,
+        "position": 3
+      }
+    ]
+  }],
   "files": {
     "ol": {
-      "scripts": "magnify.ol.min.js",
-      "styles": "magnify.ol.min.css"
+      "scripts": ["magnify.ol.min.js"],
+      "styles": ["magnify.ol.min.css"]
     }
   },
   "metadata": {
