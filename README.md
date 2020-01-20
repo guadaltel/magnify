@@ -2,7 +2,7 @@
 
 Plugin que permite realizar un efecto de zoom o de lupa sobre una o varias capas
 
-![Imagen1](./img/imagenPlugin.png)
+![Imagen1](./img/magnify.png)
 
 # Dependencias
 
@@ -27,9 +27,9 @@ Plugin que permite realizar un efecto de zoom o de lupa sobre una o varias capas
   - 'BL':bottom left
   - 'BR':bottom right
 
-- **zoom**. campo numérico que define el zoom inicial.
+- **zoom**. campo numérico que define el zoom inicial. (Valor por defecto 1)
 
-- **zoomMax**. campo numérico que define el nivel maximo de zoom.
+- **zoomMax**. campo numérico que define el nivel maximo de zoom. (Valor por defecto 10)
 
 # Eventos
 
@@ -37,21 +37,27 @@ Plugin que permite realizar un efecto de zoom o de lupa sobre una o varias capas
 
 # Ejemplos de uso
 
+## Ejemplo 1
 ```javascript
-   const map = M.map({
-     container: 'map'
-   });
+const map = M.map({
+  container: 'map'
+});
 
-   const mp = new M.plugin.Magnify({
-        layers: '',
-        postition: 'TL',
-      });
+const mp = new M.plugin.Magnify({
+  layers: '',
+  postition: 'TL',
+});
 
-   map.addPlugin(mp);
+map.addPlugin(mp);
 ```
 
+## Ejemplo 2
 ```javascript
-const mp = new Magnify({
+const map = M.map({
+  container: 'map'
+});
+
+const mp = new M.plugin.Magnify({
   layers: 'provincias,fondo,Sevilla',
   zoom: 3,
   zoomMax: 20
@@ -60,8 +66,13 @@ const mp = new Magnify({
 map.addPlugin(mp);
 ```
 
+## Ejemplo 3
 ```javascript
-const mp = new Magnify({});
+const map = M.map({
+  container: 'map'
+});
+
+const mp = new M.plugin.Magnify({});
 
 map.addPlugin(mp);
 ```
